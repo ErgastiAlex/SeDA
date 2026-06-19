@@ -1,0 +1,108 @@
+image_root: 'data/PAB/'
+# test_file: 'data/PAB/annotation/test/attr.json'
+#test_file1: 'data/PAB/annotation/multi-weather/multi-weather_light.json'
+#test_file2: 'data/PAB/annotation/multi-weather/multi-weather_dark_snow.json'
+# OOD test set
+test_file1: 'data/PAB/annotation/test/attr.json'
+test_file2: 'data/PAB/annotation/test/ucc.json'
+
+
+train_file:  [
+	'data/PAB/annotation/train_decouple/attr_0.json', 'data/PAB/annotation/train_decouple/attr_1.json',
+	'data/PAB/annotation/train_decouple/attr_2.json', 'data/PAB/annotation/train_decouple/attr_3.json',
+	'data/PAB/annotation/train_decouple/attr_4.json', 'data/PAB/annotation/train_decouple/attr_5.json',
+	'data/PAB/annotation/train_decouple/attr_6.json', 'data/PAB/annotation/train_decouple/attr_7.json',
+	'data/PAB/annotation/train_decouple/attr_8.json', 'data/PAB/annotation/train_decouple/attr_9.json',
+
+	'data/PAB/annotation/train_decouple/attr_10.json', 'data/PAB/annotation/train_decouple/attr_11.json',
+	'data/PAB/annotation/train_decouple/attr_12.json', 'data/PAB/annotation/train_decouple/attr_13.json',
+	'data/PAB/annotation/train_decouple/attr_14.json', 'data/PAB/annotation/train_decouple/attr_15.json',
+	'data/PAB/annotation/train_decouple/attr_16.json', 'data/PAB/annotation/train_decouple/attr_17.json',
+	'data/PAB/annotation/train_decouple/attr_18.json', 'data/PAB/annotation/train_decouple/attr_19.json',
+
+	'data/PAB/annotation/train_decouple/attr_20.json', 'data/PAB/annotation/train_decouple/attr_21.json',
+	'data/PAB/annotation/train_decouple/attr_22.json', 'data/PAB/annotation/train_decouple/attr_23.json',
+	'data/PAB/annotation/train_decouple/attr_24.json', 'data/PAB/annotation/train_decouple/attr_25.json',
+	'data/PAB/annotation/train_decouple/attr_26.json', 'data/PAB/annotation/train_decouple/attr_27.json',
+	'data/PAB/annotation/train_decouple/attr_28.json', 'data/PAB/annotation/train_decouple/attr_29.json',
+
+	'data/PAB/annotation/train_decouple/attr_30.json', 'data/PAB/annotation/train_decouple/attr_31.json',
+	'data/PAB/annotation/train_decouple/attr_32.json', 'data/PAB/annotation/train_decouple/attr_33.json',
+	'data/PAB/annotation/train_decouple/attr_34.json', 'data/PAB/annotation/train_decouple/attr_35.json',
+	'data/PAB/annotation/train_decouple/attr_36.json', 'data/PAB/annotation/train_decouple/attr_37.json',
+	'data/PAB/annotation/train_decouple/attr_38.json', 'data/PAB/annotation/train_decouple/attr_39.json',
+
+	'data/PAB/annotation/train_decouple/attr_40.json', 'data/PAB/annotation/train_decouple/attr_41.json',
+	'data/PAB/annotation/train_decouple/attr_42.json', 'data/PAB/annotation/train_decouple/attr_43.json',
+	'data/PAB/annotation/train_decouple/attr_44.json', 'data/PAB/annotation/train_decouple/attr_45.json',
+	'data/PAB/annotation/train_decouple/attr_46.json', 'data/PAB/annotation/train_decouple/attr_47.json',
+	'data/PAB/annotation/train_decouple/attr_48.json', 'data/PAB/annotation/train_decouple/attr_49.json',
+
+	'data/PAB/annotation/train_decouple/attr_50.json', 'data/PAB/annotation/train_decouple/attr_51.json',
+	'data/PAB/annotation/train_decouple/attr_52.json', 'data/PAB/annotation/train_decouple/attr_53.json',
+	'data/PAB/annotation/train_decouple/attr_54.json', 'data/PAB/annotation/train_decouple/attr_55.json',
+	'data/PAB/annotation/train_decouple/attr_56.json', 'data/PAB/annotation/train_decouple/attr_57.json',
+	'data/PAB/annotation/train_decouple/attr_58.json', 'data/PAB/annotation/train_decouple/attr_59.json',
+
+	'data/PAB/annotation/train_decouple/attr_60.json', 'data/PAB/annotation/train_decouple/attr_61.json',
+	'data/PAB/annotation/train_decouple/attr_62.json', 'data/PAB/annotation/train_decouple/attr_63.json',
+	'data/PAB/annotation/train_decouple/attr_64.json', 'data/PAB/annotation/train_decouple/attr_65.json',
+	'data/PAB/annotation/train_decouple/attr_66.json', 'data/PAB/annotation/train_decouple/attr_67.json',
+	'data/PAB/annotation/train_decouple/attr_68.json', 'data/PAB/annotation/train_decouple/attr_69.json',
+
+	'data/PAB/annotation/train_decouple/attr_70.json', 'data/PAB/annotation/train_decouple/attr_71.json',
+	'data/PAB/annotation/train_decouple/attr_72.json', 'data/PAB/annotation/train_decouple/attr_73.json',
+	'data/PAB/annotation/train_decouple/attr_74.json',
+]
+
+
+## Image Encoder
+vision_config: 'configs/config_swinB.json'
+h: 224
+w: 224
+
+## Text Encoder
+text_config: 'configs/config_bert.json'
+text_encoder: 'checkpoint/bert-base-uncased'
+
+
+## Training
+load_params: False
+load_pretrained: True
+
+max_words: 56
+max_tokens: 56
+eda_p: 1
+erasing_p: 0.6
+
+batch_size_train: 22
+batch_size_test: 22
+batch_size_test_text: 150
+
+embed_dim: 2048
+itc_dp: 0.5
+temp: 0.07
+label_smooth: 0.2
+
+## mlm loss
+mask_prob: 0.25
+max_masks: 10
+skipgram_prb: 0.2
+skipgram_size: 3
+mask_whole_word: True
+
+optimizer: {opt: adamW, lr: 1e-4, weight_decay: 0.01, lr_mult: 2}
+schedular: {sched: step, lr: 1e-4, epochs: 30, num_warmup_steps: 500}
+
+k_test: 128
+
+
+be_hard: True
+be_pose_img: True
+pose_conv: True
+harder_negative: False
+
+small_dataset: False
+num_workers: 8
+
+use_ca: False
