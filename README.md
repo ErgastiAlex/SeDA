@@ -1,6 +1,26 @@
 # (ECCV 2026) Divide and Align: Disentangled Vision-Language Learning for Text-Based Person Anomaly Search
 
 
+## Architecture
+<img src="./imgs/TBAS.png" alt="Architecture img" width="700">
+
+## Results
+
+| Method | Data | R@1 | R@5 | R@10 | mAP |
+|---|---:|---:|---:|---:|---:|
+| MRA | 0.1M | 70.53 | 94.69 | 97.47 | 81.59 |
+| APTM | 0.1M | 72.14 | 95.30 | 97.17 | 82.78 |
+| CAMeL | 0.1M | 74.30 | 96.79 | 98.84 | 84.20 |
+| WoRA | 0.1M | 74.47 | 96.82 | 98.48 | 84.60 |
+| IRRA | 0.1M | 76.39 | 97.62 | 99.14 | 86.33 |
+| CLIP | 0.1M | 77.60 | 98.84 | 99.75 | 87.35 |
+| RaSa | 0.1M | 80.79 | 98.89 | 99.65 | 89.20 |
+| X-VLM | 0.1M | 81.95 | 98.84 | 99.19 | 89.86 |
+| CMP | 0.1M | 83.06 | 98.89 | 99.49 | 90.41 |
+| CMP | 1M | 84.93 | 99.09 | 99.75 | 91.66 |
+| **Ours** | 0.1M | <u>85.14</u> | <u>99.24</u> | <u>99.80</u> | <u>91.83</u> |
+| **Ours** | 1M | **86.45** | **99.44** | **99.85** | **92.59** |
+
 ## Models and Weights
 The checkpoints `seda.pth` and training log have been released at
 [HuggingFace](https://huggingface.co/MaverickAlex/SeDA)
