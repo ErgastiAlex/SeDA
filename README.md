@@ -1,4 +1,4 @@
-# (ECCV 2026) Divide and Align: Disentangled Vision-Language Learning for Text-Based Person Anomaly Search
+# (ECCV 2026 Oral) Divide and Align: Disentangled Vision-Language Learning for Text-Based Person Anomaly Search
 
 
 ## Architecture
